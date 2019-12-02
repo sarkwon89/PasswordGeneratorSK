@@ -1,8 +1,70 @@
 body {
+    background-image: url("Assets/background-close-up-color-decoration-1494067.jpg");
+}
+
+.container {
+    margin-left: 33%;
+    margin-right: 33%;
     text-align: center;
+    background-color: #C6AB8E;
+    font-family: 'Khula', sans-serif;
+    border-radius: 20px;
 }
 
 
 button {
-    font-size:large;
+    font-size: large;
+    margin-bottom: 3%;
+    background: #AA6A7A;
+    border: none;
+    padding: 2%;
+    font-family: 'Khula', sans-serif;
+
+}
+
+button:hover {
+    background:#93B5AF;
+}
+
+h1 {
+    padding-top: 3%;
+}
+
+textarea {
+    padding: 10%;
+    margin-bottom: 2%;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    h1{
+        font-size: larger;
+    }
+
+    h2{
+        font-size: medium;
+    }
+
+    button{
+        font-size: small;
+    }
+
+    textarea {
+        padding: 0%;
+    }
+
 }

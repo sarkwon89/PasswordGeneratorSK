@@ -1,4 +1,3 @@
-
 //DON'T TOUCH THIS CODE! This code is adding click handlers and DOM manipulation to the page.  Edit the generatePassword function and all should work properly.
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
@@ -11,47 +10,46 @@ function generatePassword() {
     var askPwdLength = prompt("How long do you want your password to be? Your password MUST be 8 to 128 characters.");
 
     //User can't input anything less than 8 and greater than 128 characters long
-    if (askPwdLength>=8 && askPwdLength<=128) {
-        alert ("Your password will have " + askPwdLength + " characters");
-        console.log (askPwdLength);
-    } 
-    else {
+    if (askPwdLength >= 8 && askPwdLength <= 128) {
+        alert("Your password will have " + askPwdLength + " characters");
+        console.log(askPwdLength);
+
+        var upperCase = confirm("Do you want uppercase characters in your password?")
+        var lowerCase = confirm("Do you want lowercase characters in your password?")
+        var special = confirm("Do you want special characters in your password?")
+        var number = confirm("Do you want numbers in your password?")
+
+        var bankChar = ""
+        var password = ""
+
+        if (upperCase) {
+            bankChar += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        }
+
+        if (lowerCase) {
+            bankChar += "abcdefghijklmnopqrstuvwxyz"
+        }
+
+        if (special) {
+            bankChar += "!#$%&'()*+,-./:;<=>?@_`{|}[]~"
+        }
+
+        if (number) {
+            bankChar += "0123456789"
+        }
+
+        for (i = 0; i < askPwdLength; i++) {
+            console.log("i" + i);
+            password += bankChar.charAt(Math.floor(Math.random() * bankChar.length));
+            console.log("password" + password)
+            console.log("bankChar" + bankChar)
+        }
+
+        return (password);
+    } else {
         alert("Your password needs to be 8-128 characters long. Try again.");
-        var askPwdLength = prompt("How long do you want your password to be? Your password MUST be 8 to 128 characters.");
+        // var askPwdLength = prompt("How long do you want your password to be? Your password MUST be 8 to 128 characters.");
     }
-
-    var upperCase = confirm("Do you want uppercase characters in your password?")
-    var lowerCase = confirm("Do you want lowercase characters in your password?")
-    var special = confirm("Do you want special characters in your password?")
-    var number = confirm("Do you want numbers in your password?")
-    
-    var bankChar = ""
-    var password = ""
-
-    if (upperCase) {
-        bankChar += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    }
-
-    if (lowerCase) {
-        bankChar += "abcdefghijklmnopqrstuvwxyz"
-    }
-
-    if (special) {
-        bankChar += "!#$%&'()*+,-./:;<=>?@_`{|}[]~"
-    }
-
-    if(number) {
-        bankChar += "0123456789"
-    }
-
-    for(i=0;i<askPwdLength;i++){
-        console.log("i" + i);
-        password += bankChar.charAt(Math.floor(Math.random() * bankChar.length));
-        console.log("password" + password)
-        console.log("bankChar" + bankChar)
-    }
-     
-    return (password);
 }
 
 // Write password to the #password input
