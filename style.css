@@ -1,14 +1,16 @@
-body {
-    background-image: url("Assets/background-close-up-color-decoration-1494067.jpg");
+html {
+    background: url(assets/background-close-up-color-decoration-1494067.jpg) no-repeat center center fixed; 
 }
 
 .container {
+    margin-top: 10%;
     margin-left: 33%;
     margin-right: 33%;
     text-align: center;
     background-color: #C6AB8E;
     font-family: 'Khula', sans-serif;
     border-radius: 20px;
+    color: #312829;
 }
 
 

@@ -2,6 +2,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 var copyBtn = document.querySelector("#copy");
+var checkbox = document.querySelector("#checkbox");
 
 //this function will fire when you click the generate password button on the page.  I've set it to alert "You've clicked a button" and return a password of password for now. Update it to make your password
 function generatePassword() {
